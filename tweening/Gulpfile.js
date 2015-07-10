@@ -11,12 +11,12 @@ gulp.task('clean', function(cb) {
 gulp.task('atomify', function () {
   // set up the browserify instance on a task basis
   var b = browserify({
-     entries: './app.js',
+     entries: './vendor.js',
      ignoreMissing: true
   });
 
   return b.bundle()
-    .pipe(source('main.js'))
+    .pipe(source('vendor.js'))
     .pipe(buffer())
     .pipe(gulp.dest('./build/Resources/Scripts'));
 });
