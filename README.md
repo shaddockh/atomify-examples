@@ -17,7 +17,7 @@ For each example
 
 
 
-# Additional Changes (shaddockh - 2015-07-09)
+##### Additional Changes (shaddockh - 2015-07-09)
 The current implementation works fine if all of your external modules are only referenced from your main or anything in your scripts directories.  If you 
 want to allow any of your components to require in some of the npm modules, it won't work.  To get around that, I've made some changes that
 will allow you to bundle up all of your npm modules into a vendor.js script.  This script also hooks into the Duktape module loader and will intercept any
